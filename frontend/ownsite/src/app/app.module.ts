@@ -8,6 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './user/components/footer/footer.component';
+import { AboutComponent } from './user/components/about/about.component';
+import { ServiceComponent } from './user/components/service/service.component';
+import { CareerComponent } from './user/components/career/career.component';
+import { ContactComponent } from './user/components/contact/contact.component';
 
 
 @NgModule({
@@ -15,7 +19,11 @@ import { FooterComponent } from './user/components/footer/footer.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    ServiceComponent,
+    CareerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
