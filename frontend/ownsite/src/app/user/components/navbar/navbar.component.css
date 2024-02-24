@@ -1,0 +1,26 @@
+.collapse ul li{
+    margin-left: 40px;
+
+}
+.collapse ul{
+    margin-left: 200px;
+    color: black;
+    font-weight: bold;
+}
+
+.collapse ul li:hover{
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.navbar-light{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.61);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 90px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(251,223,4,1) 11%);
+}
+
