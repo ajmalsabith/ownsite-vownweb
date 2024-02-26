@@ -5,7 +5,7 @@
     margin-bottom: 10px;
 }
 
-hr {
+.hr-cont {
     width: 30%;
     border: 3px solid black;
     border-color: black;
@@ -32,8 +32,8 @@ hr {
 .se-cont{
     padding: 45px;
     background-color: yellow;
-    border-top-right-radius:30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius:40px;
+    border-bottom-left-radius: 40px;
     box-shadow: 2px 2px 5px rgba(255, 255, 0, 0.771); 
     
 }
@@ -41,11 +41,17 @@ p{
     text-align: center;
     letter-spacing: 0.2;
     line-height: 2;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .text-h5{
     font-weight: bolder;
     color: black;
     
+}
+
+.hr-cont-2{
+    width: 15%;
+    border: 3px solid black;
+    border-color: black; 
 }
