@@ -55,3 +55,32 @@ p{
     border: 3px solid black;
     border-color: black; 
 }
+.h4-content{
+    font-weight: bold;
+    color: rgba(167, 167, 21, 0.866);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.set-cont{
+    margin-top: 30px;
+
+    color: rgb(240, 233, 233);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.878);
+    color: black;
+    transition: background-color 0.6s linear;
+    transition: box-shadow 0.6s linear;
+    background-color: azure;
+    border-radius: 5px;
+
+}
+
+.set-cont:hover{
+    background-color: rgba(255, 255, 0, 0.848);
+    box-shadow: 3px 3px 6px rgba(234, 255, 0, 0.737);
+    border-radius: 30px;
+
+}
+.apart-cont{
+    padding-right: 20px;
+}
