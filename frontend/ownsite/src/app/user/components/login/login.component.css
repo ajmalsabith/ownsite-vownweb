@@ -27,8 +27,8 @@ input[type='text']{
 
 .sub-cont label{
     color: black;
-    font-weight: bold;
-    margin-top:5px ;
+    font-weight: 500; 
+    margin-top:10px ;
 }
 
 .sub-cont button{
@@ -63,4 +63,6 @@ input[type='text']{
     color: rgb(0, 0, 0);
     font-weight: 400;
     font-size: x-small;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
