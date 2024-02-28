@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit{
     if(resp){
       const payload=this.decodeToken(resp.credential)
       console.log(payload);
+      
       this.router.navigate(['home'])
       
     }
