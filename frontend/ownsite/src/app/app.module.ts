@@ -13,6 +13,8 @@ import { ServiceComponent } from './user/components/service/service.component';
 import { CareerComponent } from './user/components/career/career.component';
 import { ContactComponent } from './user/components/contact/contact.component';
 import { LoginComponent } from './user/components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -31,7 +33,12 @@ import { LoginComponent } from './user/components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
