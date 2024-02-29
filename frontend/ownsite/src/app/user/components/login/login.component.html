@@ -1,6 +1,8 @@
 <div class="container-fluid main-cont">
     <div class="sub-cont">
 
+        <form [formGroup]="Loginform" (ngSubmit)="submit()">
+
         <label for="name">Name </label><br>
         <input type="text" id="name"  formControlName="name"><br>
         <label for="name">Phone/email </label><br>
@@ -10,5 +12,6 @@
         <hr>
         <div id="google-btn"></div>
 
+    </form>
     </div>
 </div>

@@ -33,10 +33,11 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+
 
 
   ],
