@@ -1,8 +1,10 @@
 declare var google:any
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { UserServiceService } from '../../service/user-service.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,7 @@ export class LoginComponent implements OnInit{
 
   Loginform!:FormGroup
 
-  constructor(private router:Router,private toast:ToastrService){}
+  constructor(private router:Router,private toast:ToastrService,private userservice:UserServiceService){}
   ngOnInit(): void {
     google.accounts.id.initialize({
       client_id:'197165555945-pb7lus3vo9d337t8gbdovkd5qj9kjsos.apps.googleusercontent.com',
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit{
 
     this.Loginform=new FormGroup({
       name:new FormControl('',[Validators.required]),
-      emailORphone:new FormControl('',[Validators.required])
+      email:new FormControl('',[Validators.required])
     })
     
   }
@@ -37,15 +39,21 @@ export class LoginComponent implements OnInit{
   submit(){
     const userdata= this.Loginform.getRawValue()
     console.log(userdata);
-    this.toast.success(userdata.name)
+    this.userservice.loginUser(userdata).subscribe((res:any)=>{
+      this.toast.success(res.message)
+      this.router.navigate(['home'])
+
+    },(err)=>{
+      this.toast.error(err.error.message)
+    })
     
     
   }
   get name(){
     return this.Loginform.get('name')
   }
-  get emailORphone(){
-    return this.Loginform.get('emailORphone')
+  get email(){
+    return this.Loginform.get('email')
   }
 
   private decodeToken(token:string){

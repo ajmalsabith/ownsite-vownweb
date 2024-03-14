@@ -15,6 +15,7 @@ import { ContactComponent } from './user/components/contact/contact.component';
 import { LoginComponent } from './user/components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot(),

@@ -9,12 +9,12 @@ import { LoginComponent } from './user/components/login/login.component';
 
 
 const routes:Routes=[
+  {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'service',component:ServiceComponent},
   {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
-  {path:'login',component:LoginComponent},
   {path:'**',redirectTo:'home'}
 ]
 
