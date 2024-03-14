@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit{
     const userdata= this.Loginform.getRawValue()
     console.log(userdata);
     this.userservice.loginUser(userdata).subscribe((res:any)=>{
+      localStorage.setItem("usersecret",res.token)
       this.toast.success(res.message)
       this.router.navigate(['home'])
 
@@ -65,6 +66,14 @@ export class LoginComponent implements OnInit{
     if(resp){
       const payload=this.decodeToken(resp.credential)
       console.log(payload);
+
+      this.userservice.loginUser(payload).subscribe((res:any)=>{
+        localStorage.setItem("usersecret",res.token)
+        this.toast.success(res.message)
+
+      },(err)=>{
+        this.toast.error(err.error.message)
+      })
       
       this.router.navigate(['home'])
       

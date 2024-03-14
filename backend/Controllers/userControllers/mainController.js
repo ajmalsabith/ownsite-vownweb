@@ -1,20 +1,25 @@
 
 const User=require('../../Models/userModels/UserModel')
+const jwt=require('jsonwebtoken')
 
 const loginUser=async(req,res)=>{
 
     try {
-        const {name,email}=req.body
-        console.log(email,name);
+        let image=''
+        console.log(req.body);
+        const {name,email,picture}=req.body
+        image=picture
         const user= new User({
             name:name,
-            email:email
+            email:email,
+            image:image
         })
         const rese= await user.save()
+        const token = jwt.sign({ _id:rese._id}, "usersecret")
 
         if(rese){
             res.status(200).send({
-                message:'login success'
+                message:'login success',token:token
             })
         }else{
             res.status(400).send({
